@@ -86,7 +86,7 @@ angular.module('app', ['ui.router', 'firebase'])
 });
 
 },{"../package.json":15,"./controllers/login":1,"./controllers/results":2,"./controllers/vote":3,"./templates/login.html":5,"./templates/results.html":6,"./templates/vote.html":7,"angular-ui-router/release/angular-ui-router":8,"angular/angular":9,"angularfire/angularfire":10,"firebase-simple-login/firebase-simple-login":12,"firebase/firebase":13,"underscore":14}],5:[function(require,module,exports){
-module.exports = '<div class="container">\n  <h1>Login</h1>\n  <button class="btn btn-primary btn-large" ng-click="login()">Login</button>\n  <h3>#chsCodeTalk</h3>\n</div>\n';
+module.exports = '<div class="container">\n  <h1>CodeTalk</h1>\n  <center>\n  <button class="btn btn-primary btn-lg" ng-click="login()">Login</button>\n  </center>\n  <h3>#chsCodeTalk</h3>\n</div>\n';
 },{}],6:[function(require,module,exports){
 module.exports = '<div class="container">\n  <h1>Results</h1>\n  <div class="row" ng-repeat="(k,v) in votes">\n    <div class="col-xs-offset-1">\n    <h3>\n      <span class="label label-success">{{v}}</span>\n      {{k}}\n    </h3>\n    </div>\n  </div>\n  <a href="https://twitter.com/intent/tweet?button_hashtag=chsCodeTalk" class="twitter-hashtag-button" data-size="large" data-related="twilson63">Tweet Question #chsCodeTalk</a>\n<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?\'http\':\'https\';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+\'://platform.twitter.com/widgets.js\';fjs.parentNode.insertBefore(js,fjs);}}(document, \'script\', \'twitter-wjs\');</script>\n</div>\n';
 },{}],7:[function(require,module,exports){
