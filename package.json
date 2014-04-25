@@ -1,23 +1,24 @@
 {
   "name": "votr",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "devDependencies": {
     "handlebars": "^1.3.0",
     "hbsfy": "^1.3.2",
-    "atomify": "^1.4.6",
-    "w3": "^0.6.0"
+    "atomify": "^1.4.6"
   },
   "scripts": {
-    "build": "atomify",
-    "watch": "atomify -j [ --watch ]",
-    "start": "w3 --directory www --pushstate"
+    "start": "atomify -d --server [--path /index.html --port 3000 --st www]"
   },
-  "items": [
-    "Php",
-    "Python",
-    "Ruby"
-  ],
-  "firebase": "https://codetalk.firebaseio.com",
+  "votr": {
+    "title": "Awesome Vote",
+    "twitter": "#awesomeVote",
+    "items": [
+      "1",
+      "2",
+      "3"
+    ],
+    "firebase": "https://yoururl.firebaseio.com"
+  },
   "atomify": {
     "js": {
       "entry": "app/index.js",
@@ -29,6 +30,7 @@
     }
   },
   "dependencies": {
-    "underscore": "^1.6.0"
+    "underscore": "^1.6.0",
+    "atomify": "^1.5.0-beta2"
   }
 }

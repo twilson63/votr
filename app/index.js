@@ -28,8 +28,10 @@ angular.module('app', ['ui.router', 'firebase'])
   });
 })
 .constant('$us', require('underscore'))
-.constant('$fbUrl', pkg.firebase)
-.constant('$items', pkg.items)
+.constant('$fbUrl', pkg.votr.firebase)
+.constant('$items', pkg.votr.items)
+.constant('$title', pkg.votr.title)
+.constant('$twitter', pkg.votr.twitter)
 .factory('$dataRef', function($fbUrl) {
   return function() {
     var ref = new Firebase($fbUrl);
@@ -37,7 +39,11 @@ angular.module('app', ['ui.router', 'firebase'])
   }
 })
 .controller('ApplicationCtrl', function($scope, 
-  $firebaseSimpleLogin, $fbUrl, $state, $firebase, $items) {
+  $firebaseSimpleLogin, $fbUrl, $state, $firebase, $items,
+  $title, $twitter) {
+  $scope.title = $title;
+  $scope.twitter = $twitter;
+
   var dataRef = new Firebase($fbUrl);
   $scope.loginObj = $firebaseSimpleLogin(dataRef);
   $scope.items = $items;
