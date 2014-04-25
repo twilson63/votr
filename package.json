@@ -1,0 +1,34 @@
+{
+  "name": "votr",
+  "version": "0.0.1",
+  "devDependencies": {
+    "handlebars": "^1.3.0",
+    "hbsfy": "^1.3.2",
+    "atomify": "^1.4.6",
+    "w3": "^0.6.0"
+  },
+  "scripts": {
+    "build": "atomify",
+    "watch": "atomify -j [ --watch ]",
+    "start": "w3 --directory www --pushstate"
+  },
+  "items": [
+    "Php",
+    "Python",
+    "Ruby"
+  ],
+  "firebase": "https://codetalk.firebaseio.com",
+  "atomify": {
+    "js": {
+      "entry": "app/index.js",
+      "output": "www/bundle.js"
+    },
+    "css": {
+      "entry": "app/index.css",
+      "output": "www/bundle.css"
+    }
+  },
+  "dependencies": {
+    "underscore": "^1.6.0"
+  }
+}

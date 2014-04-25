@@ -1,0 +1,22 @@
+{
+  "name": "votr",
+  "version": "0.0.0",
+  "authors": [
+    "Tom Wilson <tom@jackhq.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "~0.2.10",
+    "angularfire": "~0.7.1",
+    "bootstrap": "~3.1.1",
+    "firebase-simple-login": "~1.4.0",
+    "firebase": "~1.0.11"
+  }
+}
