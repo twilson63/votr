@@ -1,10 +1,7 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 module.exports = function($scope, $state) {
   $scope.login = function() {
-    $scope.loginObj.$login('anonymous')
-    .then(function() {
-      $state.go('vote');
-    });
+    $scope.loginObj.$login('anonymous');
   };
 };
 
@@ -22,15 +19,13 @@ module.exports = function($scope, $us, $dataRef, $firebase) {
 
 };
 },{}],3:[function(require,module,exports){
-module.exports = function($scope, $fbUrl, $firebase, $state) {
+module.exports = function($scope, $fbUrl, $firebase) {
   // setup 3 way binding
 
   $scope.voteFor = function(item) {
     var vote = $firebase(new Firebase($fbUrl + '/votes/' +
       $scope.loginObj.user.id));
     vote.$set(item);
-    //$state.go('results');
-    console.log('voted for ' + item);
   };
 };
 },{}],4:[function(require,module,exports){
@@ -87,7 +82,6 @@ angular.module('app', ['ui.router', 'firebase'])
         }
         $state.go(page);
       });
-    console.log("User " + user.id + " successfully logged in!");
   });  
 });
 

@@ -51,6 +51,5 @@ angular.module('app', ['ui.router', 'firebase'])
         }
         $state.go(page);
       });
-    console.log("User " + user.id + " successfully logged in!");
   });  
 });
